@@ -13,5 +13,7 @@ class Solution:
                 return True
             if leftNode == None or rightNode == None:
                 return False
-            return leftNode.val == rightNode.val and helper(leftNode.left, rightNode.right) and helper(leftNode.right, rightNode.left)
+            return leftNode.val == rightNode.val \
+                   and helper(leftNode.left, rightNode.right) \
+                   and helper(leftNode.right, rightNode.left)
         return helper(root.left, root.right)
